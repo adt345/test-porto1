@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentasi Teknologi Informasi dan Komunikasi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2980, #26d0ce);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .presentation-container {
+            width: 100%;
+            max-width: 1200px;
+            height: 80vh;
+            position: relative;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 50px;
+            background: linear-gradient(to bottom right, #0f1b5f, #1d7d8f);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.8s ease-in-out;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0);
+            z-index: 2;
+        }
+
+        .slide.prev {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #4facfe;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #00f2fe;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .content-box {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 15px 0;
+            width: 100%;
+            max-width: 900px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cols-container {
+            display: flex;
+            width: 100%;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .col {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            min-width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .numbered-items {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .numbered-item {
+            display: flex;
+            align-items: flex-start;
+            text-align: left;
+            gap: 20px;
+        }
+
+        .number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #00f2fe;
+            min-width: 50px;
+        }
+
+        .aspects-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .aspect {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .aspect h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #4facfe;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .slide-indicators {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: #00f2fe;
+            transform: scale(1.2);
+        }
+
+        .presenter {
+            margin-top: 20px;
+            font-size: 1.3rem;
+            color: #00f2fe;
+            font-weight: 500;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #00f2fe;
+        }
+
+        .slide-number {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .cols-container {
+                flex-direction: column;
+            }
+
+            .col {
+                min-width: auto;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .aspects-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .aspect {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .slide {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Presentasi Teknologi Informasi dan Komunikasi</h1>
+
+    <div class="presentation-container">
+        <!-- Slide 1: Cover -->
+        <div class="slide active" id="slide1">
+            <div class="logo">TIK PRESENTATION</div>
+            <h1>TEKNOLOGI<br>INFORMASI DAN<br>KOMUNIKASI</h1>
+            <div class="presenter">PEMATERI AARON LOEB</div>
+            <div class="slide-number">1/10</div>
+        </div>
+
+        <!-- Slide 2: Transformasi Digital -->
+        <div class="slide" id="slide2">
+            <div class="logo">TIK PRESENTATION</div>
+            <h2>TRANSFORMASI DIGITAL</h2>
+            <div class="content-box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie massa ac odio euismod,
+                    sit amet rutrum sapien dignissim. Nulla in sollicitudin</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie massa ac odio euismod,
+                    sit amet rutrum sapien dignissim. Nulla in sollicitudin</p>
+            </div>
+            <h3>INOVASI BISNIS</h3>
+            <div class="slide-number">2/10</div>
+        </div>
+
+        <!-- Slide 3: Teknologi Informasi -->
+        <div class="slide" id="slide3">
+            <div class="logo">TIK PRESENTATION</div>
+            <div class="cols-container">
+                <div class="col">
+                    <h2>TEKNOLOGI INFORMASI</h2>
+                    <h3>KEAMANAN DATA</h3>
+                    <h3>POTENSI TEKNOLOGI</h3>
+                </div>
+                <div class="col">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie massa ac odio
+                        euismod, sit amet rutrum sapien dignissim. Nulla in sollicitudin sapien. Vestibulum a neque
+                        consectetur felis mollis vehicula eu nec sem. Mauris sed ex quis elit imperdiet facilisis.
+                        Aliquam erat volutpat.</p>
+                </div>
+            </div>
+            <div class="slide-number">3/10</div>
+        </div>
+
+        <!-- Slide 4: Kecerdasan Buatan -->
+        <div class="slide" id="slide4">
+            <div class="logo">TIK PRESENTATION</div>
+            <h1>KECERDASAN BUATAN</h1>
+            <div class="content-box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie massa ac odio euismod,
+                    sit amet rutrum sapien dignissim. Nulla in sollicitudin sapien. Vestibulum a neque consectetur felis
+                    mollis vehicula eu nec sem. Mauris sed ex quis elit imperdiet facilisis. Aliquam erat volutpat.</p>
+            </div>
+            <div class="aspects-container">
+                <div class="aspect">
+                    <h3>ASPEK 01</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                </div>
+                <div class="aspect">
+                    <h3>ASPEK 02</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                </div>
+                <div class="aspect">
+                    <h3>ASPEK 03</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                </div>
+            </div>
+            <div class="slide-number">4/10</div>
+        </div>
+
+        <!-- Slide 5: Perkembangan Teknologi -->
+        <div class="slide" id="slide5">
+            <div class="logo">TIK PRESENTATION</div>
+            <h1>PERKEMBANGAN TEKNOLOGI</h1>
+            <div class="numbered-items">
+                <div class="numbered-item">
+                    <div class="number">01</div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie massa ac odio
+                            euismod, sit amet rutrum sapien</p>
+                    </div>
+                </div>
+                <div class="numbered-item">
+                    <div class="number">02</div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie massa ac odio
+                            euismod, sit amet rutrum sapien</p>
+                    </div>
+                </div>
+                <div class="numbered-item">
+                    <div class="number">03</div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie massa ac odio
+                            euismod, sit amet rutrum sapien</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-number">5/10</div>
+        </div>
+
+        <!-- Slide 6: Internet Cepat -->
+        <div class="slide" id="slide6">
+            <div class="logo">TIK PRESENTATION</div>
+            <h1>INTERNET CEPAT</h1>
+            <div class="content-box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie massa ac odio euismod,
+                    sit amet rutrum sapien dignissim. Nulla in sollicitudin sapien. Vestibulum a neque consectetur felis
+                    mollis vehicula eu nec sem. Mauris sed ex quis elit imperdiet facilisis. Aliquam erat volutpat.</p>
+            </div>
+            <div class="slide-number">6/10</div>
+        </div>
+
+        <!-- Slide 7: Manfaat TIK -->
+        <div class="slide" id="slide7">
+            <div class="logo">TIK PRESENTATION</div>
+            <h2>MANFAAT TIK</h2>
+            <div class="content-box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie massa ac odio euismod,
+                    sit amet rutrum sapien</p>
+            </div>
+            <div class="cols-container">
+                <div class="col">
+                    <h3>PENDIDIKAN</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                </div>
+                <div class="col">
+                    <h3>KOMUNIKASI</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                </div>
+            </div>
+            <div class="slide-number">7/10</div>
+        </div>
+
+        <!-- Slide 8: Tantangan TIK -->
+        <div class="slide" id="slide8">
+            <div class="logo">TIK PRESENTATION</div>
+            <h2>TANTANGAN DALAM TIK</h2>
+            <div class="cols-container">
+                <div class="col">
+                    <h3>MENGELOLA DATA</h3>
+                    <h4>KEAMANAN DATA PRIBADI</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie massa ac odio
+                        euismod, sit amet rutrum sapien dignissim. Nulla in sollicitudin sapien. Vestibulum a neque
+                        consectetur felis mollis</p>
+                </div>
+                <div class="col">
+                    <h3>ANALISIS</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                </div>
+            </div>
+            <div class="slide-number">8/10</div>
+        </div>
+
+        <!-- Slide 9: Modern Aplikasi -->
+        <div class="slide" id="slide9">
+            <div class="logo">TIK PRESENTATION</div>
+            <h2>MODERN APLIKASI</h2>
+            <div class="cols-container">
+                <div class="col">
+                    <h3>PERKEMBANGAN APLIKASI</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie massa ac odio
+                        euismod.</p>
+                </div>
+                <div class="col">
+                    <h3>KEMUDAHAN MEMPEROLEH</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie massa ac odio
+                        euismod.</p>
+                </div>
+            </div>
+            <div class="slide-number">9/10</div>
+        </div>
+
+        <!-- Slide 10: Penutup -->
+        <div class="slide" id="slide10">
+            <div class="logo">TIK PRESENTATION</div>
+            <h1>TERIMA KASIH</h1>
+            <div class="presenter">PEMATERI AARON LOEB</div>
+            <h2>TEKNOLOGI INFORMASI</h2>
+            <div class="slide-number">10/10</div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <div class="nav-btn" id="prevBtn"><i class="fas fa-arrow-left"></i></div>
+        <div class="nav-btn" id="nextBtn"><i class="fas fa-arrow-right"></i></div>
+    </div>
+
+    <div class="slide-indicators" id="slideIndicators">
+        <!-- Indicators will be added by JavaScript -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const indicatorsContainer = document.getElementById('slideIndicators');
+            let currentSlide = 0;
+
+            // Create indicators
+            slides.forEach((slide, index) => {
+                const indicator = document.createElement('div');
+                indicator.classList.add('indicator');
+                if (index === 0) indicator.classList.add('active');
+                indicator.addEventListener('click', () => goToSlide(index));
+                indicatorsContainer.appendChild(indicator);
+            });
+
+            const indicators = document.querySelectorAll('.indicator');
+
+            // Function to update slide position
+            function updateSlidePosition() {
+                slides.forEach((slide, index) => {
+                    if (index === currentSlide) {
+                        slide.classList.add('active');
+                    } else {
+                        slide.classList.remove('active');
+                    }
+
+                    if (index < currentSlide) {
+                        slide.classList.add('prev');
+                    } else {
+                        slide.classList.remove('prev');
+                    }
+                });
+
+                // Update indicators
+                indicators.forEach((indicator, index) => {
+                    if (index === currentSlide) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+
+            // Next slide function
+            function nextSlide() {
+                if (currentSlide < slides.length - 1) {
+                    currentSlide++;
+                    updateSlidePosition();
+                }
+            }
+
+            // Previous slide function
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateSlidePosition();
+                }
+            }
+
+            // Go to specific slide
+            function goToSlide(index) {
+                currentSlide = index;
+                updateSlidePosition();
+            }
+
+            // Add event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            // Keyboard navigation
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowRight') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                }
+            });
+
+            // Initialize slides
+            updateSlidePosition();
+        });
+    </script>
+</body>
+
+</html>
