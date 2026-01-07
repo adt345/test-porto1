@@ -3783,3 +3783,13 @@ input, select, textarea {
 			}
 
 		}
+	
+	
+	/* Experience - One Column Content */
+	#second ul.content {
+		max-width: 900px;
+		margin: 0 auto;
+		text-align: left;
+		list-style: disc;
+		padding-left: 1.5em;
+	}
