@@ -3854,3 +3854,26 @@ input, select, textarea {
 		margin-bottom: 0.5em;
 		line-height: 1.6;
 	}
+
+
+	/* ===============================
+	ERP Modules Section Enhancement
+	================================ */
+
+	#modules .features li {
+	transition: 0.3s ease;
+	}
+
+	#modules .features li:hover {
+	transform: translateY(-6px);
+	}
+
+	#modules .features h3 {
+	font-weight: 700;
+	}
+
+	#modules .features p {
+	font-size: 0.95em;
+	line-height: 1.6em;
+	}
+
