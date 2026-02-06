@@ -3018,7 +3018,7 @@ input, select, textarea {
 			object-fit: cover;
 			box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 		}
-		
+
 		.spotlight .image.profile-pic {
 			margin-left: 2em; /* defaultnya 4em terlalu jauh */
 		}
@@ -3079,6 +3079,17 @@ input, select, textarea {
 				}
 
 		}
+
+		@media screen and (max-width: 736px) {
+
+			.image.profile-pic img {
+				width: min(260px, 70vw);
+				height: min(260px, 70vw);
+				border-radius: 50%;
+				object-fit: cover;
+			}
+		}
+
 
 	.spotlight .image {
 		border-color: rgba(255, 255, 255, 0.35);
