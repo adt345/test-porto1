@@ -3012,12 +3012,18 @@ input, select, textarea {
 			}
 		
 		.image.profile-pic img {
-			width: 180px;
-			height: 180px;
+			width: 260px;
+			height: 260px;
 			border-radius: 50%;
 			object-fit: cover;
-			box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+			box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 		}
+		
+		.spotlight .image.profile-pic {
+			margin-left: 2em; /* defaultnya 4em terlalu jauh */
+		}
+
+
 
 
 		@media screen and (max-width: 980px) {
