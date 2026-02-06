@@ -23,28 +23,8 @@
 			<span>Business Analysis • ERP Implementation • System Integration</span>
 		</header>
 
-		<a href="javascript:void(0)" class="nav-toggle" id="menuToggle">
-			<span></span>
-			<span></span>
-			<span></span>
-		</a>
-
-		<script>
-			const toggleBtn = document.getElementById("menuToggle");
-			const navMenu = document.getElementById("nav");
-
-			toggleBtn.addEventListener("click", function () {
-				navMenu.classList.toggle("active");
-			});
-
-			// auto close kalau klik link menu
-			document.querySelectorAll("#nav a").forEach(link => {
-				link.addEventListener("click", () => {
-				navMenu.classList.remove("active");
-				});
-			});
-		</script>
-
+		<!-- Mobile Menu Button -->
+		<a href="#nav" class="nav-toggle">Menu</a>
 
 		<!-- Nav -->
 		<nav id="nav">
