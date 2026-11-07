@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>CV - Aditya Demas</title>
+	<style>
+		@page { size: A4; margin: 14mm 16mm; }
+		* { box-sizing: border-box; }
+		body {
+			font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+			font-size: 10.5pt;
+			line-height: 1.45;
+			color: #222;
+			max-width: 210mm;
+			margin: 0 auto;
+			padding: 14mm 16mm;
+		}
+		h1 { font-size: 22pt; margin: 0; letter-spacing: 0.5px; }
+		.title { font-size: 12pt; color: #2b6cb0; font-weight: 600; margin: 2px 0 6px; }
+		.contact { font-size: 9.5pt; color: #444; }
+		.contact a { color: #444; text-decoration: none; }
+		h2 {
+			font-size: 11pt;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: #2b6cb0;
+			border-bottom: 1.5px solid #2b6cb0;
+			padding-bottom: 2px;
+			margin: 16px 0 8px;
+		}
+		p { margin: 0 0 6px; }
+		.job { margin-bottom: 10px; page-break-inside: avoid; }
+		.job-head { display: flex; justify-content: space-between; align-items: baseline; }
+		.job-title { font-weight: 700; font-size: 10.5pt; }
+		.job-date { font-size: 9.5pt; color: #555; white-space: nowrap; }
+		.company { font-style: italic; color: #444; margin-bottom: 3px; }
+		ul { margin: 2px 0 0; padding-left: 18px; }
+		li { margin-bottom: 2px; }
+		.skills { display: grid; grid-template-columns: 130px 1fr; gap: 3px 10px; }
+		.skills dt { font-weight: 700; }
+		.skills dd { margin: 0; }
+		.note { font-size: 9.5pt; color: #444; margin-top: 4px; }
+		@media print {
+			body { padding: 0; max-width: none; }
+		}
+	</style>
+</head>
+<body>
+
+	<header>
+		<h1>Aditya Demas</h1>
+		<div class="title">Odoo Functional &amp; Technical Consultant</div>
+		<div class="contact">
+			Yogyakarta, Indonesia &nbsp;|&nbsp;
+			+62 895-6029-15706 &nbsp;|&nbsp;
+			<a href="mailto:adityademas001@gmail.com">adityademas001@gmail.com</a><br />
+			<a href="https://www.linkedin.com/in/demas-kristiawan-564075175">linkedin.com/in/demas-kristiawan-564075175</a> &nbsp;|&nbsp;
+			<a href="https://portofolio-demas.vercel.app">portofolio-demas.vercel.app</a>
+		</div>
+	</header>
+
+	<h2>Professional Summary</h2>
+	<p>
+		Odoo consultant with 9+ years delivering ERP implementations for manufacturing,
+		distribution, retail, and service companies. Combines business process analysis with
+		hands-on Python/Odoo development, from requirement gathering and gap analysis to custom
+		modules, integrations, data migration, and go-live support. 20+ Odoo projects and 50+
+		custom modules delivered.
+	</p>
+
+	<h2>Skills</h2>
+	<dl class="skills">
+		<dt>Technical</dt>
+		<dd>Odoo v14–v17 (Community &amp; Enterprise), Python, PostgreSQL, XML, QWeb, OWL/JavaScript, REST API, Git</dd>
+		<dt>Functional</dt>
+		<dd>Business Requirement Analysis, Gap Analysis, Business Process Mapping, ERP Solution Design, Multi-Company Setup, Approval Workflow Design</dd>
+		<dt>Odoo Modules</dt>
+		<dd>Sales &amp; POS, Purchase, Inventory &amp; Warehouse, Accounting, Approvals &amp; Access Control, Expenses, Custom Reporting (PDF/XLSX/Word)</dd>
+		<dt>Delivery</dt>
+		<dd>Stakeholder Management, User Training, UAT Coordination, Data Migration, Documentation, Post Go-Live Support</dd>
+	</dl>
+
+	<h2>Work Experience</h2>
+
+	<div class="job">
+		<div class="job-head">
+			<span class="job-title">IT Business Analyst</span>
+			<span class="job-date">2024 – Present</span>
+		</div>
+		<div class="company">PT Jala Akuakultur Lestari Alamku · Yogyakarta</div>
+		<ul>
+			<li>Lead requirement gathering and gap analysis with business teams, translating needs into system specifications for the development team.</li>
+			<li>Designed a shared-user model allowing multiple employees to operate under a single system account while keeping every transaction traceable to the individual employee, reducing user license needs without losing accountability.</li>
+			<li>Built and evaluated sales dashboards tracking revenue, sales performance, and trends, supporting data-driven decisions on sales targets and strategy.</li>
+			<li>Coordinate testing (UAT), rollout, and continuous improvement of business systems with stakeholders and external consultants.</li>
+		</ul>
+	</div>
+
+	<div class="job">
+		<div class="job-head">
+			<span class="job-title">Odoo Developer</span>
+			<span class="job-date">2022 – 2024</span>
+		</div>
+		<div class="company">PT Sinergi Data Totalindo · Jakarta</div>
+		<ul>
+			<li>Developed and customized Odoo modules for multiple client implementations across manufacturing, distribution, retail, and service industries.</li>
+			<li>Built custom features including approval workflows, custom reports (PDF/XLSX), and business logic tailored to each client's operational needs.</li>
+			<li>Integrated Odoo with third-party systems via REST API and supported data migration from legacy systems and spreadsheets.</li>
+			<li>Translated functional requirements from consultants and stakeholders into technical solutions, participating in testing and UAT before go-live.</li>
+			<li>Provided post-go-live support, bug fixing, and enhancements based on user feedback.</li>
+		</ul>
+		<p class="note"><strong>Projects:</strong> ANDRITZ Hydro, PT Gokomodo Uniti Indonesia, Bikers Sejati Motor,
+			Mascot Distributor, Merpati Wahana Raya, PT Inti Karya Semesta, PT Ratu Rosari.</p>
+	</div>
+
+	<div class="job">
+		<div class="job-head">
+			<span class="job-title">ERP Developer (Techno-Functional)</span>
+			<span class="job-date">2017 – 2022</span>
+		</div>
+		<div class="company">PT Marel Sukses Pratama (Unggul Perkasa Group) · Yogyakarta</div>
+		<ul>
+			<li>Developed, customized, and maintained Odoo modules supporting daily business operations across the group's companies.</li>
+			<li>Worked directly with internal users to understand business processes, gather requirements, and translate them into system configurations and custom features.</li>
+			<li>Configured core Odoo modules and supported users in day-to-day system usage, including training and issue resolution.</li>
+			<li>Integrated Odoo with third-party applications and automated recurring business processes to reduce manual work.</li>
+			<li>Handled system maintenance, troubleshooting, and performance optimization.</li>
+		</ul>
+	</div>
+
+	<h2>Education</h2>
+	<div class="job">
+		<div class="job-head">
+			<span class="job-title">Bachelor of Information Technology</span>
+			<span class="job-date">Expected 2027</span>
+		</div>
+		<div class="company">Universitas Kristen Immanuel (UKRIM), Yogyakarta</div>
+	</div>
+
+	<h2>Languages</h2>
+	<!-- TODO: isi level bahasa Inggris yang sesuai -->
+	<p>Indonesian (Native) · English ([Level])</p>
+
+</body>
+</html>
