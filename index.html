@@ -1,14 +1,107 @@
 <!DOCTYPE HTML>
-<html>
+<!--
+	Template: Stellar by HTML5 UP (html5up.net) | Licensed under CCA 3.0
+	Atribusi di footer wajib dipertahankan sesuai lisensi.
+-->
+<html lang="en">
 
 <head>
-	<title>Aditya Demas | Odoo Consultant</title>
+	<title>Aditya Demas | Odoo Functional & Technical Consultant</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- SEO -->
+	<meta name="description"
+		content="Odoo Functional & Technical Consultant with 9+ years of ERP implementation experience across manufacturing, distribution, retail, and service industries. 20+ projects, 50+ custom modules." />
+	<meta name="author" content="Aditya Demas" />
+	<!-- TODO: ganti dengan domain final Anda -->
+	<link rel="canonical" href="https://portofolio-demas.vercel.app/" />
+
+	<!-- Open Graph (preview saat dibagikan di LinkedIn / WhatsApp) -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Aditya Demas | Odoo Functional & Technical Consultant" />
+	<meta property="og:description"
+		content="9+ years delivering Odoo ERP implementations — from business analysis to custom modules, integrations, and go-live." />
+	<meta property="og:url" content="https://portofolio-demas.vercel.app/" />
+	<!-- TODO: buat gambar 1200x630 px, simpan di images/og-cover.png -->
+	<meta property="og:image" content="https://portofolio-demas.vercel.app/images/og-cover.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+
+	<!-- TODO: tambahkan favicon di images/favicon.png -->
+	<link rel="icon" type="image/png" href="images/favicon.png" />
+
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
+
+	<!-- Style tambahan untuk elemen baru -->
+	<style>
+		.experience-item .meta {
+			display: block;
+			margin: -0.25em 0 1em 0;
+			font-size: 0.9em;
+			opacity: 0.75;
+		}
+
+		.experience-item .company {
+			display: block;
+			font-weight: 600;
+		}
+
+		.case-studies {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 1.5em;
+			text-align: left;
+			margin-top: 1em;
+		}
+
+		.case-study {
+			border: solid 1px rgba(0, 0, 0, 0.1);
+			border-radius: 8px;
+			padding: 1.75em;
+		}
+
+		.case-study h3 {
+			margin-bottom: 0.25em;
+		}
+
+		.case-study .tags {
+			font-size: 0.8em;
+			opacity: 0.7;
+			margin-bottom: 1em;
+			display: block;
+		}
+
+		.case-study dl {
+			margin: 0;
+		}
+
+		.case-study dt {
+			font-weight: 600;
+			margin-top: 0.75em;
+		}
+
+		.case-study dd {
+			margin-left: 0;
+		}
+
+		.credentials {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			gap: 1.5em;
+			text-align: left;
+		}
+
+		.credentials h3 {
+			margin-bottom: 0.5em;
+		}
+
+		.credentials ul {
+			margin-bottom: 0;
+		}
+	</style>
 </head>
 
 <body class="is-preload">
@@ -18,60 +111,57 @@
 		<!-- Header -->
 		<header id="header" class="alt">
 			<h1>Aditya Demas</h1>
-			<span>Odoo Consultant & Software Engineer</span><br />
-			<span>Business Analysis • ERP Implementation • System Integration</span>
-
+			<p>Odoo Functional &amp; Technical Consultant<br />
+				Business Analysis • ERP Implementation • System Integration</p>
+			<ul class="actions special">
+				<!-- TODO: upload CV ke folder files/ -->
+				<li><a href="files/CV-Aditya-Demas.pdf" class="button primary icon solid fa-file-download"
+						download>Download CV</a></li>
+				<li><a href="#contact" class="button">Contact Me</a></li>
+			</ul>
 		</header>
 
 		<!-- Nav -->
 		<nav id="nav">
 			<ul>
-				<li><a href="#intro" class="active">Profile</a></li>
-				<li><a href="#first">Skills</a></li>
-				<li><a href="#modules">Modules</a></li>
-				<li><a href="#second">Experience</a></li>
-				<li><a href="#cta">Contact</a></li>
+				<li><a href="#about" class="active">About</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#experience">Experience</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#credentials">Credentials</a></li>
+				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
 
 		<!-- Main -->
 		<div id="main">
 
-			<!-- Profile -->
-			<section id="intro" class="main">
+			<!-- About -->
+			<section id="about" class="main">
 				<div class="spotlight">
 					<div class="content">
 						<header class="major">
-							<h2>Professional Summary</h2>
+							<h2>About Me</h2>
 						</header>
 						<p>
-							ERP & Odoo Specialist with 9 years of experience in ERP development,
-							business process analysis, and enterprise solution delivery.
-
-							Proven expertise in Odoo implementation, custom module development,
-							system integration, business process optimization, and stakeholder
-							management.
-
-							Experienced in translating business requirements into scalable
-							technical solutions while supporting digital transformation initiatives
-							across manufacturing, distribution, retail, and service industries.
-
-							Strong background in ERP consulting, solution design, process automation,
-							data analysis, and end-to-end project implementation. Passionate about
-							bridging the gap between business and technology to deliver innovative
-							solutions that improve operational efficiency and business growth.
+							Odoo consultant with 9+ years delivering ERP implementations for manufacturing,
+							distribution, retail, and service companies. I combine business process analysis
+							with hands-on Python/Odoo development — from requirement gathering and gap
+							analysis to custom modules, integrations, data migration, and go-live support.
 						</p>
-
+						<p>
+							I work best where business and technology meet: turning how a company actually
+							operates into an ERP system people actually use.
+						</p>
 					</div>
 					<span class="image profile-pic">
-						<img src="images/pp.png" alt="Profile Photo" />
+						<img src="images/pp.png" alt="Aditya Demas" />
 					</span>
-
 				</div>
 			</section>
 
 			<!-- Skills -->
-			<section id="first" class="main special">
+			<section id="skills" class="main special">
 				<header class="major">
 					<h2>Core Skills</h2>
 				</header>
@@ -79,30 +169,28 @@
 					<li>
 						<span class="icon solid major style1 fa-code"></span>
 						<h3>Technical</h3>
+						<!-- TODO: tambahkan versi Odoo yang lebih baru jika pernah menanganinya -->
 						<p>
-							Odoo v14–v17, Python, PostgreSQL, XML, QWeb,
-							REST API, Excel (XLSX Report)
+							Odoo v14–v17 (Community &amp; Enterprise), Python, PostgreSQL,
+							XML, QWeb, OWL/JavaScript, REST API, Git
 						</p>
 					</li>
 					<li>
 						<span class="icon major style3 fa-copy"></span>
 						<h3>Functional</h3>
 						<p>
-							Business Requirement Analysis, ERP Flow Design,
-							Multi-Company Setup, Approval Workflow
+							Business Requirement Analysis, Gap Analysis, Business Process Mapping,
+							ERP Solution Design, Multi-Company Setup, Approval Workflow Design
 						</p>
 					</li>
 					<li>
 						<span class="icon major style5 fa-gem"></span>
-						<h3>Soft Skills</h3>
+						<h3>Delivery</h3>
 						<p>
-							Business Process Analysis & Mapping,<br />
-							Requirement Gathering & Gap Analysis,<br />
-							Analytical Thinking & Problem Solving,<br />
-							Cross-Department Communication,<br />
-							Leadership & Clear Documentation
+							Stakeholder Management, User Training, UAT Coordination,
+							Data Migration, Technical &amp; Functional Documentation,
+							Post Go-Live Support
 						</p>
-
 					</li>
 				</ul>
 			</section>
@@ -110,106 +198,87 @@
 			<!-- ERP Modules Expertise -->
 			<section id="modules" class="main special">
 				<header class="major">
-					<h2>ERP Modules Expertise</h2>
+					<h2>Odoo Modules Expertise</h2>
 					<p>
-						Experienced in analyzing and implementing core Odoo modules for retail,
-						operational, and financial business processes.
+						Hands-on implementation and customization of core Odoo modules
+						across operational and financial processes.
 					</p>
 				</header>
 
 				<ul class="features">
-
-					<!-- Sales -->
 					<li>
 						<span class="icon solid major style1 fa-shopping-cart"></span>
-						<h3>Sales & POS</h3>
+						<h3>Sales &amp; POS</h3>
 						<p>
-							Sales Order (SO), Quotation Management, Customer Invoicing,
-							Point of Sale integration, end-to-end sales flow.
+							Quotations, Sales Orders, Pricelists, Customer Invoicing,
+							Point of Sale, end-to-end order-to-cash flow.
 						</p>
 					</li>
-
-					<!-- Purchase -->
 					<li>
 						<span class="icon solid major style3 fa-truck"></span>
-						<h3>Purchase & Procurement</h3>
+						<h3>Purchase &amp; Procurement</h3>
 						<p>
-							Request for Quotation (RFQ), Purchase Order (PO),
-							Vendor Management, Approval-based procurement workflow.
+							RFQ, Purchase Orders, Vendor Management,
+							approval-based procure-to-pay workflow.
 						</p>
 					</li>
-
-					<!-- Inventory -->
 					<li>
 						<span class="icon solid major style5 fa-warehouse"></span>
-						<h3>Inventory & Warehouse</h3>
+						<h3>Inventory &amp; Warehouse</h3>
 						<p>
-							Stock Movement, Multi-Warehouse Setup, Internal Transfers,
-							Inventory Valuation (FIFO/AVCO), Delivery & Receipt operations.
+							Multi-Warehouse Setup, Routes &amp; Internal Transfers,
+							Inventory Valuation (FIFO/AVCO), Receipts &amp; Deliveries.
 						</p>
 					</li>
-
-					<!-- Accounting -->
 					<li>
 						<span class="icon solid major style2 fa-file-invoice-dollar"></span>
-						<h3>Accounting & Finance</h3>
+						<h3>Accounting &amp; Finance</h3>
 						<p>
-							Customer Invoice & Vendor Bills, Journal Entries,
-							Payment Reconciliation, Financial Reports, Tax Configuration.
+							Invoices &amp; Vendor Bills, Journal Entries, Payment Reconciliation,
+							Tax Configuration, Financial Reports.
 						</p>
 					</li>
-
-					<!-- Approval -->
 					<li>
 						<span class="icon solid major style4 fa-check-circle"></span>
-						<h3>Approvals & Workflow</h3>
+						<h3>Approvals &amp; Access Control</h3>
 						<p>
-							Multi-level Approval Process, Delegation Rules,
-							Role-based Access Control, Audit Trail & Operational Governance.
+							Multi-level Approvals, Delegation Rules, Role-based Access,
+							Record Rules, Audit Trail.
 						</p>
 					</li>
-
-					<!-- Expenses -->
 					<li>
 						<span class="icon solid major style1 fa-receipt"></span>
-						<h3>Expenses & Employee Claims</h3>
+						<h3>Expenses</h3>
 						<p>
-							Employee Expense Submission, Manager Approval,
-							Reimbursement Process, Integration with Accounting Entries.
+							Expense Submission, Manager Approval, Reimbursement,
+							automatic posting to Accounting.
 						</p>
 					</li>
-
-					<!-- Integration -->
 					<li>
 						<span class="icon solid major style3 fa-plug"></span>
-						<h3>System Integration</h3>
+						<h3>Integration &amp; Migration</h3>
 						<p>
-							REST API Integration, External System Sync,
-							Custom Automation, Data Migration, End-to-End ERP Connectivity.
+							REST API Integration, Third-Party System Sync,
+							Scheduled Automation, Data Migration from Legacy Systems.
 						</p>
 					</li>
-
-					<!-- Reporting -->
 					<li>
 						<span class="icon solid major style5 fa-chart-line"></span>
 						<h3>Custom Reporting</h3>
 						<p>
-							XLSX Reports, PDF Documents, Word Reports
+							XLSX Reports, QWeb PDF Documents, Word Reports,
+							operational &amp; management dashboards.
 						</p>
 					</li>
-
 				</ul>
 			</section>
 
-
 			<!-- Experience -->
-			<section id="second" class="main special">
+			<section id="experience" class="main special">
 				<header class="major">
 					<h2>Experience</h2>
-					<p>Professional background and key responsibilities</p>
 				</header>
 
-				<!-- Statistics -->
 				<ul class="statistics">
 					<li class="style1">
 						<span class="icon solid fa-laptop"></span>
@@ -224,139 +293,201 @@
 						<strong>50+</strong> Custom Modules
 					</li>
 					<li class="style4">
-						<span class="icon solid fa-signal"></span>
-						<strong>Multi</strong> Industries
+						<span class="icon solid fa-industry"></span>
+						<!-- TODO: isi jumlah industri yang benar -->
+						<strong>[X]+</strong> Industries
 					</li>
 				</ul>
-				<!-- Professional Experience -->
-				<div class="experience-list">
+
+				<div class="experience-list" style="text-align: left;">
+
 					<div class="experience-item">
-						<h3>Information Technology Business Analyst</h3>
-						<span class="company">PT. Jala Akuakultur Lestari Alamku</span>
+						<h3>IT Business Analyst</h3>
+						<span class="company">PT Jala Akuakultur Lestari Alamku</span>
+						<!-- TODO: isi periode & lokasi -->
+						<span class="meta">[Bulan Tahun] – Present · [Kota / Remote]</span>
+						<!-- TODO: ganti [..] dengan data nyata, hapus poin yang tidak relevan -->
 						<ul>
-							<li>Gather and analyze business requirements to identify operational needs and translate
-								them into effective technology solutions.</li>
-
-							<li>Conduct business process analysis, gap analysis, and solution design to improve
-								operational efficiency.</li>
-
-							<li>Collaborate with stakeholders, consultants, and development teams to ensure successful
-								implementation of business solutions.</li>
-
-							<li>Support system integration, testing, reporting, and continuous process improvement
-								initiatives.</li>
-
-							<li>Drive data-driven decision making through business analysis, dashboard evaluation, and
-								reporting optimization.</li>
+							<li>Lead requirement gathering and gap analysis with [operations / finance / ...]
+								teams, translating business needs into system specifications for the
+								development team.</li>
+							<li>Designed [nama solusi/fitur], resulting in [hasil terukur, mis. waktu proses
+								turun dari X ke Y].</li>
+							<li>Built and evaluated dashboards for [area], supporting data-driven decisions on
+								[topik].</li>
+							<li>Coordinate testing (UAT), rollout, and continuous improvement of business
+								systems with stakeholders and external consultants.</li>
 						</ul>
 					</div>
 
-
 					<div class="experience-item">
-
-						<h3>ERP Consultant & Odoo Developer</h3>
-
-						<span class="company">PT. Sinergi Data Totalindo</span>
-
+						<h3>ERP Consultant &amp; Odoo Developer</h3>
+						<span class="company">PT Sinergi Data Totalindo</span>
+						<span class="meta">[Bulan Tahun] – [Bulan Tahun] · [Kota]</span>
 						<ul>
-							<li>Delivered ERP consulting and implementation services for clients across manufacturing,
-								distribution, retail, and service industries.</li>
-
-							<li>Conducted business process analysis and requirement gathering sessions with
-								stakeholders.</li>
-
-							<li>Designed, configured, customized, and deployed Odoo ERP solutions.</li>
-
-							<li>Performed system integration, testing, troubleshooting, and post-go-live support.</li>
-
-							<li>Prepared technical documentation and conducted user training sessions.</li>
+							<li>Delivered [X]+ Odoo implementations end-to-end for clients in manufacturing,
+								distribution, retail, and services — from requirement workshops to go-live.</li>
+							<li>Developed [X]+ custom modules covering [approval workflows, integrations,
+								custom reports, ...].</li>
+							<li>Migrated data from [legacy system / Excel] into Odoo, including [master data,
+								opening balances, stock].</li>
+							<li>Trained [X]+ end users and wrote functional &amp; technical documentation for
+								each project.</li>
+							<li>Provided post-go-live support, troubleshooting, and enhancement requests.</li>
 						</ul>
-
-						<h4>Selected Projects</h4>
-
-						<ul>
-							<li>ANDRITZ Hydro</li>
-							<li>PT Gokomodo Uniti Indonesia</li>
-							<li>Bikers Sejati Motor</li>
-							<li>Mascot Distributor</li>
-							<li>Merpati Wahana Raya</li>
-							<li>PT Inti Karya Semesta</li>
-							<li>PT Ratu Rosari</li>
-						</ul>
-
+						<p><em>Key clients: ANDRITZ Hydro, PT Gokomodo Uniti Indonesia, Bikers Sejati Motor,
+								Mascot Distributor, Merpati Wahana Raya, PT Inti Karya Semesta, PT Ratu Rosari
+								— see selected case studies below.</em></p>
 					</div>
 
-
 					<div class="experience-item">
-
 						<h3>ERP Developer</h3>
-
-						<span class="company">
-							PT. Marel Sukses Pratama (Part of Unggul Perkasa Group)
-						</span>
-
+						<span class="company">PT Marel Sukses Pratama (Unggul Perkasa Group)</span>
+						<span class="meta">[Bulan Tahun] – [Bulan Tahun] · [Kota]</span>
 						<ul>
-							<li>Developed and maintained Odoo ERP modules supporting core business operations.</li>
-
-							<li>Designed and implemented custom solutions based on business requirements.</li>
-
-							<li>Integrated Odoo ERP with third-party systems and applications.</li>
-
-							<li>Automated business processes to improve operational efficiency.</li>
-
-							<li>Performed troubleshooting, system maintenance, and performance optimization.</li>
-
-							<li>Collaborated with business users to identify opportunities for process improvements and
-								system enhancements.</li>
+							<li>Developed and maintained Odoo modules supporting [sales / inventory /
+								accounting] operations across [X] companies in the group.</li>
+							<li>Integrated Odoo with [nama sistem pihak ketiga] via REST API, removing
+								[manual double-entry / proses manual tertentu].</li>
+							<li>Automated [nama proses], reducing [waktu / error] by [X].</li>
+							<li>Handled system maintenance, troubleshooting, and performance optimization.</li>
 						</ul>
+					</div>
 
+				</div>
+			</section>
+
+			<!-- Case Studies -->
+			<section id="projects" class="main special">
+				<header class="major">
+					<h2>Selected Case Studies</h2>
+					<p>A few representative projects. Client details shared with permission or anonymized.</p>
+				</header>
+
+				<!-- TODO: isi 3–4 proyek terbaik. Pastikan Anda boleh menyebut nama klien;
+				     kalau tidak, samarkan (mis. "Multinational hydropower manufacturer"). -->
+				<div class="case-studies">
+
+					<article class="case-study">
+						<h3>ANDRITZ Hydro</h3>
+						<span class="tags">Manufacturing · Odoo [versi] · [Modul, mis. Purchase, Inventory]</span>
+						<dl>
+							<dt>Challenge</dt>
+							<dd>[Masalah bisnis klien dalam 1–2 kalimat.]</dd>
+							<dt>My Role</dt>
+							<dd>[mis. Functional consultant &amp; developer — requirement, design, development.]</dd>
+							<dt>Solution</dt>
+							<dd>[Apa yang dibangun / dikonfigurasi.]</dd>
+							<dt>Result</dt>
+							<dd>[Hasil terukur atau dampak nyata.]</dd>
+						</dl>
+					</article>
+
+					<article class="case-study">
+						<h3>PT Gokomodo Uniti Indonesia</h3>
+						<span class="tags">[Industri] · Odoo [versi] · [Modul]</span>
+						<dl>
+							<dt>Challenge</dt>
+							<dd>[...]</dd>
+							<dt>My Role</dt>
+							<dd>[...]</dd>
+							<dt>Solution</dt>
+							<dd>[...]</dd>
+							<dt>Result</dt>
+							<dd>[...]</dd>
+						</dl>
+					</article>
+
+					<article class="case-study">
+						<h3>Mascot Distributor</h3>
+						<span class="tags">Distribution · Odoo [versi] · [Modul]</span>
+						<dl>
+							<dt>Challenge</dt>
+							<dd>[...]</dd>
+							<dt>My Role</dt>
+							<dd>[...]</dd>
+							<dt>Solution</dt>
+							<dd>[...]</dd>
+							<dt>Result</dt>
+							<dd>[...]</dd>
+						</dl>
+					</article>
+
+				</div>
+			</section>
+
+			<!-- Credentials -->
+			<section id="credentials" class="main special">
+				<header class="major">
+					<h2>Education &amp; Certifications</h2>
+				</header>
+				<!-- TODO: isi atau hapus blok yang tidak ada -->
+				<div class="credentials">
+					<div>
+						<h3><span class="icon solid fa-graduation-cap"></span> Education</h3>
+						<ul class="alt">
+							<li><strong>[Jurusan]</strong><br />[Universitas], [Tahun lulus]</li>
+						</ul>
+					</div>
+					<div>
+						<h3><span class="icon solid fa-certificate"></span> Certifications</h3>
+						<ul class="alt">
+							<li><strong>[Nama sertifikasi, mis. Odoo Functional Certification v17]</strong><br />[Penerbit], [Tahun]</li>
+						</ul>
+					</div>
+					<div>
+						<h3><span class="icon solid fa-language"></span> Languages</h3>
+						<ul class="alt">
+							<li><strong>Indonesian</strong> — Native</li>
+							<li><strong>English</strong> — [Professional working proficiency]</li>
+						</ul>
 					</div>
 				</div>
 			</section>
 
-			<!-- Contact -->
+			<!-- CTA -->
 			<section id="cta" class="main special">
 				<header class="major">
 					<h2>Let’s Work Together</h2>
 					<p>
-						Open for collaboration and <strong>available for opportunities</strong> as an
-						<strong>Odoo Developer</strong>, <strong>Business Analyst</strong>, or
-						<strong>ERP Specialist</strong>, for both project-based work and professional positions.
+						Available for <strong>full-time roles</strong> and <strong>project-based Odoo
+							implementations</strong> — consulting, custom development, or business analysis.
 					</p>
-
 				</header>
 				<footer class="major">
 					<ul class="actions special">
 						<li><a href="mailto:adityademas001@gmail.com" class="button primary">Email Me</a></li>
-						<li><a href="#footer" class="button">Contact Info</a></li>
+						<li><a href="https://wa.me/62895602915706" class="button" target="_blank"
+								rel="noopener">WhatsApp</a></li>
 					</ul>
 				</footer>
 			</section>
-
 
 		</div>
 
 		<!-- Footer -->
 		<footer id="footer">
-			<section>
+			<section id="contact">
 				<h2>Contact</h2>
 				<dl class="alt">
 					<dt>Location</dt>
-					<dd>Indonesia</dd>
-					<dt>Phone</dt>
-					<dd>+62 895 6029 15706</dd>
+					<!-- TODO: kota memberi konteks zona waktu / onsite -->
+					<dd>[Kota], Indonesia · Open to remote</dd>
+					<dt>WhatsApp</dt>
+					<dd><a href="https://wa.me/62895602915706" target="_blank" rel="noopener">+62 895-6029-15706</a></dd>
 					<dt>Email</dt>
 					<dd><a href="mailto:adityademas001@gmail.com">adityademas001@gmail.com</a></dd>
 				</dl>
 				<ul class="icons">
 					<li><a href="https://www.linkedin.com/in/demas-kristiawan-564075175"
-							class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
-					<li><a href="https://gitlab.com/aditya_demas" class="icon brands fa-github alt"><span
-								class="label">GitLab</span></a></li>
+							class="icon brands fa-linkedin alt" target="_blank" rel="noopener"><span
+								class="label">LinkedIn</span></a></li>
+					<li><a href="https://gitlab.com/aditya_demas" class="icon brands fa-gitlab alt"
+							target="_blank" rel="noopener"><span class="label">GitLab</span></a></li>
 				</ul>
 			</section>
 			<p class="copyright">
-				&copy; Aditya Demas. Design: HTML5 UP.
+				&copy; 2026 Aditya Demas. Design: <a href="https://html5up.net">HTML5 UP</a>.
 			</p>
 		</footer>
 
